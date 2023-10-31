@@ -3,6 +3,7 @@ import querystring from 'querystring';
 import crypto from 'crypto';
 // import { Express, Request, Response } from 'express';
 import DedicatedVirtualAccount from "./classes/DedicatedVirtualAccount";
+import Customers from "./classes/Customers";
 import type { ClassOptionsInterface } from "./types/common";
 
 // const INITIALIZE_URL = `${BASE_URL}/transaction/initialize`;
@@ -15,10 +16,11 @@ import type { ClassOptionsInterface } from "./types/common";
  * @author Adeola Bada
  */
 export default class Paystack {
-    private static dva: DedicatedVirtualAccount;
     private static secret_key: string;
     private static public_key: string;
     private static options: ClassOptionsInterface;
+    private static dva: DedicatedVirtualAccount;
+    private static customers: Customers;
 
     /**
      * Initialize Paystack Class Instance
@@ -44,6 +46,7 @@ export default class Paystack {
         };
 
         this.dva = new DedicatedVirtualAccount(this.options)
+        this.customers = new Customers(this.options)
     }
 
     /**
@@ -54,6 +57,16 @@ export default class Paystack {
      */
     static DVA(): DedicatedVirtualAccount {
         return this.dva;
+    }
+
+    /**
+    * All methods needed for Customers API
+    * @description The Customers API allows you create and manage customers on your integration.
+    * @returns {}
+    * @author Adeola Bada
+    */
+    static Customers(): Customers {
+        return this.customers;
     }
 }
 

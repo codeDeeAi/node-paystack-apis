@@ -20,7 +20,7 @@ import {
  * @description The Dedicated Virtual Account API enables Nigerian merchants to manage unique payment accounts of their customers.
  * @author Adeola Bada
  */
-class DedicatedVirtualAccount {
+export default class DedicatedVirtualAccount {
     private options: ClassOptionsInterface;
 
     constructor(options: ClassOptionsInterface) {
@@ -264,5 +264,3 @@ class DedicatedVirtualAccount {
         }
     };
 }
-
-export default DedicatedVirtualAccount;
