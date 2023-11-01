@@ -63,13 +63,14 @@ export default class Paystack {
     private static refunds: Refunds;
     private static verification: Verification;
     private static miscellaneous: Miscellaneous;
+    
     /**
      * Initialize Paystack Class Instance
      * @param {string} secret_key Secret API Key provided by paystack
      * @param {string} public_key Public API Key provided by paystack
      * @returns {void}
      */
-    static init(secret_key: string, public_key: string): void {
+    static Init(secret_key: string, public_key: string): void {
         this.secret_key = secret_key;
         this.public_key = public_key;
         this.options = {
