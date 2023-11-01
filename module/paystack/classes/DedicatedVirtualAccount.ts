@@ -1,4 +1,4 @@
-import type { ClassOptionsInterface, BasicRes } from "../types/common";
+import type { BasicRes } from "../types/common";
 import {
     CreateDVAccountReq,
     CreateDVAccountRes,
@@ -11,21 +11,16 @@ import {
     SplitDVAccountReq,
     SplitDVAccountRes,
     RemoveSplitFromDVAccountRes,
-    BankProvider,
     FetchBankProvidersRes
 } from "../types/dva";
+import BaseClass from "./Base";
 
 /**
  * All methods needed for Dedicated Virtual Accounts API
  * @description The Dedicated Virtual Account API enables Nigerian merchants to manage unique payment accounts of their customers.
  * @author Adeola Bada
  */
-export default class DedicatedVirtualAccount {
-    private options: ClassOptionsInterface;
-
-    constructor(options: ClassOptionsInterface) {
-        this.options = options;
-    }
+export default class DedicatedVirtualAccount extends BaseClass {
 
 
     /**

@@ -1,4 +1,4 @@
-import type { ClassOptionsInterface, BasicRes } from "../types/common";
+import type { BasicRes } from "../types/common";
 import {
     CreateCustomerReq,
     CreateCustomerRes,
@@ -12,19 +12,14 @@ import {
     WhitelistOrBlacklistCustomerReq,
     WhitelistOrBlacklistCustomerRes
 } from "../types/customers"
+import BaseClass from "./Base";
 
 /**
 * All methods needed for Customers API
 * @description The Customers API allows you create and manage customers on your integration.
 * @author Adeola Bada
 */
-export default class Customers {
-
-    private options: ClassOptionsInterface;
-
-    constructor(options: ClassOptionsInterface) {
-        this.options = options;
-    }
+export default class Customers extends BaseClass {
 
     /**
      * Create a customer on your integration
