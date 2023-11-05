@@ -70,7 +70,7 @@ export interface ListBanksRes extends BasicRes {
 export interface ListBanksReq {
     country: string;
     use_cursor: boolean;
-    perPage: number;
+    perPage?: number;
     pay_with_bank_transfer?: boolean;
     pay_with_bank?: boolean;
     next?: string;

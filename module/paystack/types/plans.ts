@@ -32,7 +32,7 @@ export interface CreatePlanRes extends BasicRes {
 }
 
 export interface ListPlanReq {
-    perPage: number; // Specify how many records you want to retrieve per page. If not specify we use a default value of 50.
+    perPage?: number; // Specify how many records you want to retrieve per page. If not specify we use a default value of 50.
     page: number; // Specify exactly what page you want to retrieve. If not specify we use a default value of 1.
     status?: string; // Filter list by plans with specified status
     interval?: PlanInterval; // Filter list by plans with specified interval

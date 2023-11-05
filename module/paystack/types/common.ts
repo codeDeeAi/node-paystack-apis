@@ -6,7 +6,7 @@ export interface ApiConfig {
     [key: string]: any;
 }
 
-export interface ClassOptionsInterface{
+export interface ClassOptionsInterface {
     secret_key: string;
     public_key: string;
     base_url: string;
@@ -25,4 +25,12 @@ export enum RiskActionEnum {
     Default = "default",
     Allow = "allow",
     Deny = "deny"
+}
+
+export interface AllNumberMeta {
+    total: number;
+    skipped: number;
+    perPage: number;
+    page: number;
+    pageCount: number;
 }

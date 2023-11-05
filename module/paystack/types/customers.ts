@@ -23,7 +23,7 @@ export interface CreateCustomerRes extends BasicRes {
 }
 
 export interface ListCustomersReq {
-    perPage: number;
+    perPage?: number;
     page: number;
     from: string;
     to: string;

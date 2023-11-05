@@ -60,7 +60,7 @@ export interface ListRefundsReq {
     currency: string;
     from: string; // Accepts date strings in YYYY-MM-DD format
     to: string;   // Accepts date strings in YYYY-MM-DD format
-    perPage: number;
+    perPage?: number;
     page: number;
 }
 
