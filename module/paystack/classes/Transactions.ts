@@ -24,12 +24,6 @@ import {
 */
 export default class Transactions extends BaseClass {
 
-    // Charge Authorization
-    // View Transaction Timeline
-    // Transaction Totals
-    // Export Transactions
-    // Partial Debit
-
     /**
     * Initialize a transaction from your backend
     * @param {InitializeTransReq} options
@@ -183,6 +177,35 @@ export default class Transactions extends BaseClass {
                 .get(`${uri}`, config);
 
             return result.data as ViewTransactionTimelineRes;
+
+        } catch (error: any) {
+
+            throw new Error(`${error?.message}`);
+        }
+    };
+
+    /**
+    * Total amount received on your account
+    * @param {TransactionTotalsReq} options
+    * @returns {Promise<TransactionTotalsRes>}
+    * @throws {Error}
+    */
+    async transactionTotals(options: TransactionTotalsReq): Promise<TransactionTotalsRes> {
+
+        const stringifiedParams = this.options.querystring.stringify({ ...options });
+
+        const uri = `${this.options.base_url}/transaction/totals?${stringifiedParams}`;
+
+        try {
+
+            const config = {
+                headers: this.options.base_api_headers_config
+            };
+
+            const result = await this.options.axios
+                .get(`${uri}`, config);
+
+            return result.data as TransactionTotalsRes;
 
         } catch (error: any) {
 
