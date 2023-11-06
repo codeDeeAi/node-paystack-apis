@@ -30,7 +30,7 @@ export enum RiskActionEnum {
 export interface AllNumberMeta {
     total: number;
     skipped: number;
-    perPage: number;
+    perPage: number | string;
     page: number;
     pageCount: number;
 }
