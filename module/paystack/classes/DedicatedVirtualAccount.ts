@@ -54,7 +54,7 @@ export default class DedicatedVirtualAccount extends BaseClass {
      * @returns {Promise<BasicRes>}
      */
     public assignDVAccount = async (options: AssignDVAccountReq): Promise<BasicRes> => {
-        const uri = `${this.options.base_url}/dedicated_account`;
+        const uri = `${this.options.base_url}/dedicated_account/assign`;
 
         try {
 

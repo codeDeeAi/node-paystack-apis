@@ -1,4 +1,12 @@
 import BaseClass from "./Base";
+import {
+    CreatePageReq,
+    CreatePageRes,
+    ListPagesReq,
+    ListPagesRes,
+    FetchPageRes,
+    AddProductRes
+} from "../types/paymentPages";
 
 /**
 * All methods needed for Payment Pages API
@@ -6,5 +14,5 @@ import BaseClass from "./Base";
 * @author Adeola Bada
 */
 export default class PaymentPages extends BaseClass {
-    
+
 }
